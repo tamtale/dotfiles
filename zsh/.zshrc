@@ -66,7 +66,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
