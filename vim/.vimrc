@@ -6,8 +6,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'shmup/vim-sql-syntax'
 Plug 'lervag/vimtex'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 autocmd Filetype tex setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
