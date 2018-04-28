@@ -7,19 +7,25 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
-Plug 'scrooloose/nerdtree'
+Plug 'agude/vim-eldar'
 call plug#end()
+
+set number
+set ignorecase
+set cursorline
+set directory^=$HOME/.vim/tmp//
+
 
 autocmd Filetype tex setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
-nnoremap <silent> <enter> :noh<cr>
+" Useful mappings
+nnoremap <silent> <enter> :noh<CR>
 inoremap <silent> kj <Esc>
 
-set number
-set directory^=$HOME/.vim/tmp//
 let g:vimtex_view_general_viewer = 'zathura'
 
 " colors
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme eldar
+
