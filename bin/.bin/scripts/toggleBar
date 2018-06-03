@@ -1,0 +1,9 @@
+#!/bin/bash
+
+polyid=$(xdotool search --name "bar1")
+
+if xprop -id $polyid | grep -q "Normal"; then
+	xdotool windowunmap $polyid
+else
+	xdotool windowmap $polyid
+fi

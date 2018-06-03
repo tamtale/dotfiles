@@ -8,6 +8,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'agude/vim-eldar'
+Plug 'alvan/vim-closetag'
 call plug#end()
 
 set number
@@ -27,5 +28,5 @@ let g:vimtex_view_general_viewer = 'zathura'
 " colors
 syntax enable
 set background=dark
-colorscheme eldar
+colorscheme koehler
 

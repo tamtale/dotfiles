@@ -1,0 +1,24 @@
+#!/bin/bash
+
+MAXLEN=30
+
+while true; do
+	song=$(spotifycli --status)
+	length=${#song}
+	if [ "$song" = "spotify is off" ]; then
+		echo ""
+	else
+		if (("$length" < $MAXLEN)); then
+			echo "$song"
+		else
+			echo ${song:0:$MAXLEN}	
+			sleep .5
+			for i in $(seq 1 $(($length - $MAXLEN))); do
+				echo ${song:$i:$MAXLEN}
+				sleep .25
+			done
+		fi
+	fi
+	sleep 1
+done
+	
