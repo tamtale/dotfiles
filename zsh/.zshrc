@@ -100,6 +100,7 @@ alias -s c='vi'
 alias -s pdf='zathura'
 alias -s png='xdg-open'
 alias -g G='| grep'
+alias mcm='make clean && make'
 
 # Override functions
 prompt_dir() {

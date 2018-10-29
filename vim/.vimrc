@@ -8,7 +8,6 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
 Plug 'agude/vim-eldar'
-Plug 'alvan/vim-closetag'
 call plug#end()
 
 set number
@@ -18,6 +17,7 @@ set directory^=$HOME/.vim/tmp//
 
 
 autocmd Filetype tex setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype javascript setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " Useful mappings
 nnoremap <silent> <enter> :noh<CR>
@@ -28,5 +28,13 @@ let g:vimtex_view_general_viewer = 'zathura'
 " colors
 syntax enable
 set background=dark
-colorscheme koehler
+colorscheme solarized
+
+" MuComplete
+set completeopt+=menuone
+set completeopt+=noselect
+set completeopt+=noinsert
+set shortmess+=c
+set belloff+=ctrlg
+
 

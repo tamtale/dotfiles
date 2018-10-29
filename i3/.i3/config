@@ -23,7 +23,7 @@ smart_borders on
 # STARTUP
 #   Wallpaper
 exec xcompmgr &
-exec_always feh --bg-fill ~/Pictures/Wallpapers/city.jpg
+exec_always feh --bg-fill ~/Pictures/wallpaper.jpg
 exec unclutter -idle 1 # Hide cursor
 exec_always "killall polybar; polybar bar1; polybar bar2"
 exec_always "killall ranger; tilix -e ranger --class='ranger' --new-process"
@@ -61,6 +61,7 @@ bindsym $mod+q exec qutebrowser
 bindsym $mod+b exec ~/.bin/scripts/toggleBar
 bindsym $mod+p exec killall polybar && polybar bar1
 bindsym $mod+y exec ~/.bin/scripts/lock.sh
+bindsym $mod+t exec google-chrome -app=https://messages.android.com
 bindsym $mod+m exec monitor
 bindsym Print exec scrot 
 bindsym XF86Tools exec gnome-control-center
