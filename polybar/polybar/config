@@ -48,8 +48,8 @@ font-3 = "FontAwesome:style=Regular:pixelsize=10;1"
 
 modules-left = i3
 modules-center = xwindow
-modules-right =  spotify-current wlan date battery 
-;modules-right =  spotify-current wlan memory cpu date battery 
+;modules-right =  spotify-current wlan date memory cpu battery 
+modules-right =  spotify-current wlan memory cpu date battery 
 
 tray-position = right
 tray-padding = 2
@@ -225,7 +225,7 @@ format-prefix = " "
 format-prefix-foreground = #f2ff68
 ;format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = %percentage_used%%
+label =  %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -234,7 +234,7 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-label-connected =%essid%
+label-connected = %essid%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -349,23 +349,23 @@ format-charging-underline = #7fff00
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = 
 format-full-prefix-foreground = #4cef78
 ;format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = #4cef78
 ;ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
 ;animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-foreground = $4cef78
-animation-charging-framerate = 750
+animation-charging-framerate = 450
 
 [module/temperature]
 type = internal/temperature
